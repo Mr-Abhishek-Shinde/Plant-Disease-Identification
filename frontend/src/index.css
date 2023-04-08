@@ -1,13 +1,70 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* prediction page styling: */
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.container-home form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-home form .submit{
+  background-color: #cb5121;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.container-home form .submit:hover{
+  background-color: #e43a0c;
+}
+
+/* navbar styling: */
+
+.navbar{
+  position: fixed;
+  width: calc(100vw - 30px);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+
+.navbar .title{
+  font-size: 25px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar nav{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar li{
+  margin: 0px 10px;
+  padding: 0px 10px;
+}
+
+.navbar a{
+  text-decoration: None;
 }

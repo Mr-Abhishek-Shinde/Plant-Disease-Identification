@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const ErrorPage = () => {
   const styles = {
@@ -7,7 +8,7 @@ const ErrorPage = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh',
+      height: 'calc(100vh - 70px)',
       backgroundColor: '#f8f9fa',
     },
 
@@ -63,7 +64,8 @@ const ErrorPage = () => {
         Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has
         been moved to another URL.
       </p>
-      <button style={styles.button}>Take me back to home page</button>
+      <Link to='/'><button style={styles.button}>Take me back to home page</button></Link>
+      
     </div>
   );
 };

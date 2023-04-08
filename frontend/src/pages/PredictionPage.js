@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import DragDrop from '../components/DragDrop'
 
 const Home = () => {
   const [file, setFile] = useState(null);
   const [prediction, setPrediction] = useState(null);
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
+  const handleFileChange = (file) => {
+    setFile(file);
     setPrediction(null);
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+  
     if (!file) {
       alert('Please select an image to upload');
       return;
     }
-
+  
     const formData = new FormData();
     formData.append('file', file);
-
+  
     try {
       const response = await axios.post('http://localhost:10000/predict', formData, {
         headers: {
@@ -34,13 +35,15 @@ const Home = () => {
       alert('Error: Could not make prediction');
     }
   };
+  
 
   return (
-    <div>
+    <div className="container-home">
       <form onSubmit={handleFormSubmit}>
-        <input type="file" accept='image/*' onChange={handleFileChange} />
-        <button type="submit">Predict</button>
+        <DragDrop onFileChange={handleFileChange} />
+        <button type="submit" className='submit'>Predict</button>
       </form>
+      
 
       {prediction && (
         <div>
