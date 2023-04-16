@@ -1,43 +1,16 @@
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+  --secondary: rgb(162, 43, 27);
+  --bg-gradient: linear-gradient(90deg, rgba(47, 56, 73, 1) 0%, rgba(59, 68, 82, 1) 100%);
+}
+
 *{
   margin: 0;
   padding: 0;
 }
 
-/* prediction page styling: */
-
-.container-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 70px;
-}
-
-.container-home form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-home form .submit{
-  background-color: #cb5121;
-  color: #fff;
-  border: none;
-  padding: 8px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 5px;
-  margin-top: 10px;
-}
-
-.container-home form .submit:hover{
-  background-color: #e43a0c;
-}
-
 /* navbar styling: */
-
 .navbar{
   position: fixed;
   width: calc(100vw - 30px);
@@ -47,10 +20,23 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 15px;
+  background-color: var(--primary);
+  z-index: 10;
 }
 
-.navbar .title{
-  font-size: 25px;
+.nav-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-title .title{
+  font-size: 28px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-title h3{
+  font-size: 15px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -67,4 +53,276 @@
 
 .navbar a{
   text-decoration: None;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+/* home page styling: */
+/* .container-homePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  padding-top: 85px;
+  min-height: calc(100vh - 100px);
+}
+
+.container-homePage .section1{
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-homePage .section1 img{
+  height: 400px;
+  width: 600px;
+} */
+
+.container-homePage {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+.section1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+  margin-bottom: 80px;
+}
+
+.section1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.section1 .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.section1 h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.section1 h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+}
+
+.section1 .tagline {
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  color: rgb(233, 246, 167);
+}
+
+.section1 button {
+  background-color: var(--primary);
+  border: none;
+  padding: 15px 30px;
+  margin-top: 15%;
+  font-size: 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.section1 button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.section2{
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2 h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section2 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.section2 p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Section 3 */
+.section3{
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section3 img{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.section3 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.section3 ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1%;
+}
+
+.section3 li {
+  text-align: center;
+  width: 28%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.section3 li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.section3 li p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* prediction page styling: */
+.predictionpage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  padding-top: 85px;
+  min-height: calc(100vh - 100px);
+}
+
+.predictionpage-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.predictionpage-container form .submit{
+  background-color: var(--secondary);
+  color: #f7f6f0;
+  border: none;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.predictionpage-container form .submit:hover{
+  background-color: var(--secondary);
+}
+
+.prediction-result{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* DiseaseDetails component styling: */
+.disease-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.disease-details h1,
+.disease-details h2 {
+  color: var(--primary);
+  margin-top: 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* DiseaseInfoCard component styling: */
+
+.Disease-info-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+}
+
+.Disease-info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: var(--primary);
+  border-radius: 4px 0 0 4px;
+}
+
+.Disease-info-card h1 {
+  color: var(--secondary);
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.Disease-info-card p {
+  margin-top: 10px;
+  line-height: 1.4;
 }

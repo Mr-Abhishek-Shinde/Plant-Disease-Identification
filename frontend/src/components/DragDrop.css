@@ -5,9 +5,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 3px dotted #d5501b;
+    border: 3px dotted var(--secondary);
     padding: 1rem;
-    background-color: #fdf6e3;
+    background-color: #cbfff5;
 }
 
 .dropzone {
@@ -23,13 +23,13 @@
 .message {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #d5501b;
+    color: var(--secondary);
     margin-bottom: 0.5rem;
 }
 
 .browse {
     font-size: 1rem;
-    color: #d5501b;
+    color: var(--secondary);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    background-color: #d5501b;
+    background-color: var(--secondary);
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
@@ -72,7 +72,7 @@
 }
 
 .error {
-    color: #d9534f;
+    color: var(--error);
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }

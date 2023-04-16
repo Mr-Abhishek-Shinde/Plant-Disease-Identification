@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./DragDrop.css";
 
-const DragDrop = ({ onFileChange }) => {
+const DragDrop = ({ onFileChange, onRemoveClicked }) => {
   const [image, setImage] = useState(null);
   const [error, setError] = useState(null);
 
@@ -25,7 +25,7 @@ const DragDrop = ({ onFileChange }) => {
 
   const handleRemoveImage = () => {
     setImage(null);
-    document.getElementById("fileInput").value = ""; // reset the input value to an empty string
+    document.getElementById("fileInput").value = "";
   };
   
 
@@ -51,7 +51,7 @@ const DragDrop = ({ onFileChange }) => {
             <button
               type="button"
               className="remove-button"
-              onClick={handleRemoveImage}
+              onClick={() => {handleRemoveImage(); onRemoveClicked()}}
             >
               &times;
             </button>
