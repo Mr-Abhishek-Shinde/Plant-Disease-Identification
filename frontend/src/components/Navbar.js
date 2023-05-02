@@ -1,17 +1,27 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <div className="navbar">
-            <div className="nav-title">
-                <h1 className="title">AgroNexus</h1>
-                <h3>From Diagnosis To Solution</h3>
-            </div>
-            <nav>
-                <li><Link to='/home'>Home</Link></li>
-            </nav>
-        </div>
-    )
-}
+  return (
+    <div className="navbar">
+      <div className="nav-title">
+        <Link to="/">
+          <h1 className="title">AgroNexus</h1>
+          <h3>From Diagnosis To Solution</h3>
+        </Link>
+      </div>
+      <nav>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/predict">Predict</Link>
+        </li>
+        <li>
+          <Link to="#">About</Link>
+        </li>
+      </nav>
+    </div>
+  );
+};
 
 export default Navbar;
