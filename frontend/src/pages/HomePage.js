@@ -26,17 +26,7 @@ const HomePage = () => {
         >
           <h2>What Is AgroNexus?</h2>
           <p>
-            AgroNexus is an AI-based platform that aims to provide solutions for
-            agriculture-related challenges by leveraging machine learning and
-            predictive analytics. The platform helps farmers and
-            agriculture-related businesses to make data-driven decisions by
-            providing them with actionable insights. One of the key features of
-            AgroNexus is its ability to predict and diagnose crop diseases,
-            pests, and nutrient deficiencies using machine learning algorithms.
-            By analyzing various factors such as weather conditions, soil
-            properties, and historical data, the platform can identify potential
-            issues before they become widespread and provide recommendations to
-            mitigate them.
+            AgroNexus is a platform that detects the diseases in crops and provides information and solutions for the diseases. One of the key features of AgroNexus is its ability to predict and diagnose crop diseases and pests using machine learning algorithms.
           </p>
           <h3>Connecting Agriculture and Technology</h3>
         </div>
