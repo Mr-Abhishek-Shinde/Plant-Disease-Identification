@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import heroImage from "../images/hero-image.jpg";
+import infoImage from "../images/info.jpg";
 import scanImage from "../images/scan.jpg";
 import diagnoseImage from "../images/diagnose.jpg";
 import treatmentImage from "../images/treatment.jpg";
@@ -21,9 +22,7 @@ const HomePage = () => {
       </section>
       <section className="section2 section">
         <div
-          className="overlay info"
-          style={{ background: 'url("infoImage.jpg")' }}
-        >
+          className="overlay info">
           <h2>What Is AgroNexus?</h2>
           <p>
             AgroNexus is a platform that detects the diseases in crops and provides information and solutions for the diseases. One of the key features of AgroNexus is its ability to predict and diagnose crop diseases and pests using machine learning algorithms.
@@ -38,8 +37,7 @@ const HomePage = () => {
             <img src={scanImage} alt="" />
             <h3>Scan Your Plants</h3>
             <p>
-              Simply take a picture of your plant and let <span>AgroNexus</span>{" "}
-              do the rest.
+              Simply upload a picture of your plant and let <span> AgroNexus </span> do the rest.
             </p>
           </li>
           <li>

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Sofia+Sans+Condensed:wght@200&display=swap");
 
+@font-face {
+  font-family: BRUX;
+  src: url("./fonts/BRUX.ttf")
+}
+
 :root {
   --primary: #1aac83;
   --error: #e7195a;
@@ -21,13 +26,13 @@
   position: fixed;
   width: 100%;
   /* width: calc(100vw - 30px); */
-  height: 70px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 0px 15px;
-  background-color: var(--primary); 
+  /* background-color: var(--primary);  */
   /* background-color: rgb(0, 195, 255);  */
   z-index: 10;
 }
@@ -67,14 +72,13 @@
 .navbar a {
   text-decoration: None;
   color: black;
-  font-size: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
 }
 
 .navbar li:hover a{
-  color: white;
+  color: var(--primary);
 }
 
 .container-homePage {
@@ -127,11 +131,34 @@
   z-index: 1;
 }
 
-.section1 h1 {
+/* .section1 h1 {
   font-size: 80px;
   margin-bottom: 20px;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
   color: white;
+} */
+
+.section1 h1 {
+  font-size: 60px;
+  font-family: BRUX;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+
+  color: white;
+  text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828, 
+    0 5px 0 #262626, 
+    0 6px 0 #242424, 
+    0 7px 0 #222, 
+    0 8px 0 #202020, 
+    0 9px 0 #1e1e1e, 
+    0 10px 0 #1c1c1c, 
+    0 11px 0 #1a1a1a, 
+    0 15px 20px rgba(0, 0, 0, 0.9);
 }
 
 .section1 h2 {
@@ -143,12 +170,13 @@
 
 .section1 .tagline {
   font-size: 20px;
+  font-family: 'comic sans ms';
   margin-bottom: 40px;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   color: rgb(233, 246, 167);
 }
 
-.section1 button {
+/* .section1 button {
   background-color: var(--primary);
   border: none;
   padding: 15px 30px;
@@ -168,6 +196,33 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   color: var(--primary);
+} */
+
+.section1 button {
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 22px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 16px 42px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0 solid;
+  box-shadow: inset 0 0 35px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.section1 button:hover {
+  border: 7px double rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 35px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 20px;
+  text-shadow: 1px 1px 2px #427388;
 }
 
 .section2 {
@@ -179,6 +234,7 @@
   background-image: url("images/info.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(0.8);
 }
 
 .section2 h2 {
@@ -188,7 +244,6 @@
 }
 
 .section2 .info {
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +271,7 @@
 }
 
 .section3 ul {
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -230,6 +285,7 @@
   display: block;
   width: 30%;
   height: 80%;
+  padding: 10px;
   margin-left: 2%;
   margin-right: 2%;
 }
@@ -303,9 +359,10 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  border: 2px solid black;
 }
 
 .disease-details h1,
@@ -318,12 +375,24 @@
   margin-bottom: 5px;
 }
 
+.disease-details h2 {
+  margin-bottom: 20px;
+}
+
+.disease-details .download-icon{
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: relative;
+  float: right;
+}
+
 /* DiseaseInfoCard component styling: */
 
 .Disease-info-card {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ddefe8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   position: relative;

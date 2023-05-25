@@ -16,9 +16,6 @@ const Navbar = () => {
         <li>
           <Link to="/predict">Predict</Link>
         </li>
-        <li>
-          <Link to="#">About</Link>
-        </li>
       </nav>
     </div>
   );
