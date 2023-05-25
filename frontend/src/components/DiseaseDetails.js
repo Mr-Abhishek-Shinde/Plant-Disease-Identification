@@ -1,8 +1,12 @@
 import React from 'react'
 import DiseaseInfoCard from '../components/DiseaseInfoCard'
+import GeneratePdfFile from './GeneratePdfFile'
 const DiseaseDetails = (props) => {
+  const { predictedDiseaseData } = props;
+
   return (
     <div className='disease-details'>
+        <GeneratePdfFile data={predictedDiseaseData}/>
         <h1>Plant Name: {props.predictedDiseaseData.plant_name}</h1>
         <h2>Disease Name: {props.predictedDiseaseData.disease_name}</h2>
         <DiseaseInfoCard title="Symptoms" data={Object.values(props.predictedDiseaseData.disease_symptoms)} />
