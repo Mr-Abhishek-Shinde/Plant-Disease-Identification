@@ -155,10 +155,10 @@ const PredictionPage = () => {
 
       {!healthy && prediction && predictedDiseaseData && (
         <div>
-          <div className="prediction-result">
+          {/* <div className="prediction-result">
             <h3>Disease Name: {prediction.class_name}</h3>
             <h4>Confidence: {prediction.confidence}</h4>
-          </div>
+          </div> */}
           <div className="disease-result">
             <DiseaseDetails
               key={predictedDiseaseData._id}

@@ -1,6 +1,6 @@
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import Download_Icon from '../images/download-icon.png'
+import Download_Icon from '../images/download_icon.png'
 
 const styles = StyleSheet.create({
     page: {

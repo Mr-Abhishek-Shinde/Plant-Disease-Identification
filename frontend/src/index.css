@@ -78,7 +78,8 @@
 }
 
 .navbar li:hover a{
-  color: var(--primary);
+  /* color: var(--primary); */
+  color: var(--error);
 }
 
 .container-homePage {
@@ -119,7 +120,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 .section1 .overlay {
@@ -231,10 +232,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("images/info.jpg");
+  background-image: url("images/abstract_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 
 .section2 h2 {
@@ -268,6 +269,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("images/abstract_bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
 }
 
 .section3 ul {
@@ -322,6 +327,10 @@
   padding: 15px;
   padding-top: 85px;
   min-height: calc(100vh - 100px);
+  background-image: url("images/abstract_bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
 }
 
 .predictionpage-container form {
@@ -358,6 +367,7 @@
 .disease-details {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -380,8 +390,8 @@
 }
 
 .disease-details .download-icon{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: block;
   position: relative;
   float: right;
@@ -398,6 +408,10 @@
   position: relative;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
+  background-image: url("images/abstract_bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(0.5); */
 }
 
 .Disease-info-card::before {

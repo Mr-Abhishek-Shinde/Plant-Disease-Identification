@@ -1,20 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import heroImage from "../images/hero-image.jpg";
-import infoImage from "../images/info.jpg";
+// import infoImage from "../images/info.jpg";
 import scanImage from "../images/scan.jpg";
 import diagnoseImage from "../images/diagnose.jpg";
 import treatmentImage from "../images/treatment.jpg";
 
+import Aos from 'aos';
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+
 const HomePage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="container-homePage">
       <section className="section1 section">
         <img src={heroImage} alt="" />
         <div className="overlay">
-          <h1>AgroNexus</h1>
-          <h2>From Diagnosis To Solution</h2>
-          <p className="tagline">The Future of Plant Health is Here</p>
+          <h1 data-aos="fade-left">AgroNexus</h1>
+          <h2 data-aos="fade-right">From Diagnosis To Solution</h2>
+          <p className="tagline" data-aos="zoom-in" data-aos-duration="1200">The Future of Plant Health is Here</p>
           <Link to="/predict">
             <button>Get Started</button>
           </Link>
