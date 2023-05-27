@@ -1,0 +1,24 @@
+{
+  "name": "plant-disease-identification",
+  "version": "1.0.0",
+  "description": "### Technologies Used: 1) Python 2) Tensorflow 3) FastAPI 4) ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-frontend": "cd ./frontend && npm start",
+    "start-backend": "cd ./backend && npm run dev",
+    "start-api": "cd ./image-based-ident-api && uvicorn main:app --host=localhost --port=10000",
+    "start-project": "npm run start-frontend & npm run start-backend & npm run start-api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-Abhishek-Shinde/plant-disease-identification.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-Abhishek-Shinde/plant-disease-identification/issues"
+  },
+  "homepage": "https://github.com/Mr-Abhishek-Shinde/plant-disease-identification#readme"
+}
