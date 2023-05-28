@@ -27,6 +27,11 @@ const HomePage = () => {
             <button>Get Started</button>
           </Link>
         </div>
+        <svg class="arrows">
+          <path class="a1" d="M0 0 L15 16 L30 0"></path>
+          <path class="a2" d="M0 15 L15 31 L30 15"></path>
+          <path class="a3" d="M0 30 L15 46 L30 30"></path>
+        </svg>
       </section>
       <section className="section2 section">
         <div
@@ -37,6 +42,11 @@ const HomePage = () => {
           </p>
           <h3>Connecting Agriculture and Technology</h3>
         </div>
+        <svg class="arrows">
+          <path class="a1" d="M0 0 L15 16 L30 0"></path>
+          <path class="a2" d="M0 15 L15 31 L30 15"></path>
+          <path class="a3" d="M0 30 L15 46 L30 30"></path>
+        </svg>
       </section>
       <section className="section3 section">
         <h2>Key Features</h2>
