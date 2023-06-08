@@ -5,7 +5,8 @@ import Download_Icon from '../images/download_icon.png'
 const styles = StyleSheet.create({
     page: {
         flexDirection: 'column',
-        backgroundColor: '#E4E4E4'
+        backgroundColor: '#E4E4E4',
+        padding: '25px'
     },
     section: {
         margin: 8,
