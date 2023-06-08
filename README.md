@@ -27,7 +27,7 @@
 
 ` cd .. `
 
-` cd ./frontend `
+` cd ./backend `
 ` npm i `
 
 `cd ..`
