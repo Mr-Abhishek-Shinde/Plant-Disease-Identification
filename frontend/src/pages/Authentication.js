@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import LoginComponent from "./LoginComponent";
-import SignupComponent from "./SignupComponent";
-import "../login.css"; // Import the CSS file
+import LoginComponent from "../components/LoginComponent";
+import SignupComponent from "../components/SignupComponent";
+import "../login.css";
 
 const Authentication = () => {
   const [showLogin, setShowLogin] = useState(true);

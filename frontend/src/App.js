@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import PredictionPage from "./pages/PredictionPage";
 import ErrorPage from "./pages/ErrorPage";
-import Authentication from "./components/Authentication";
+import Authentication from "./pages/Authentication";
 
 function App() {
   return (

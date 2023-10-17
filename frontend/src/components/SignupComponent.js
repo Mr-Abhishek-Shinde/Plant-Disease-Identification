@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-// import "./SignupComponent.css"; // Import the CSS file
-import "../login.css"; // Import the CSS file
+import "../login.css";
+import { useSignup } from "../hooks/useSignup";
 
 const SignupComponent = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignup = () => {
-    // Handle signup logic here, e.g., send data to the server
+  const {signup, error, isLoading } = useSignup();
+
+  const handleSignup =  async (e) => {
+    e.preventDefault()
+
+    await signup(email, password)
   };
 
   return (
@@ -37,9 +41,11 @@ const SignupComponent = () => {
           className="input-field"
         />
       </div>
-      <button onClick={handleSignup} className="btn-primary">
+      <button onClick={handleSignup} className="btn-primary" disabled={isLoading}>
         Sign Up
       </button>
+
+      {error && <div className="error">{error}</div>}
     </div>
   );
 };

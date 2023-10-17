@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-// import "./LoginComponent.css"; // Import the CSS file
-import "../login.css"; // Import the CSS file
+import "../login.css";
+import { useLogin } from "../hooks/useLogin";
 
 const LoginComponent = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    // Handle login logic here, e.g., send data to the server
+  const {login, error, isLoading } = useLogin();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    await login(email, password);
   };
 
   return (
@@ -16,9 +20,9 @@ const LoginComponent = () => {
       <div>
         <input
           type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="input-field"
         />
         <input
@@ -29,9 +33,11 @@ const LoginComponent = () => {
           className="input-field"
         />
       </div>
-      <button onClick={handleLogin} className="btn-primary">
+      <button onClick={handleLogin} className="btn-primary" disabled={isLoading}>
         Login
       </button>
+
+      {error && <div className="error">{error}</div>}
     </div>
   );
 };

@@ -65,6 +65,13 @@
   flex-direction: row;
 }
 
+.navbar nav div{
+  padding: 0 20px 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
 .navbar li {
   margin: 0px 15px;
   padding: 5px 12px;
@@ -81,6 +88,16 @@
 .navbar li:hover a {
   /* color: var(--primary); */
   color: var(--error);
+}
+
+.navbar button {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .container-homePage {
