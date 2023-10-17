@@ -2,16 +2,18 @@
 
 @font-face {
   font-family: BRUX;
-  src: url("./fonts/BRUX.ttf")
+  src: url("./fonts/BRUX.ttf");
 }
 
 :root {
   --primary: #1aac83;
   --error: #e7195a;
   --secondary: rgb(162, 43, 27);
-  --bg-gradient: linear-gradient(90deg,
-      rgb(31, 79, 168) 0%,
-      rgba(59, 68, 82, 1) 100%);
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgb(31, 79, 168) 0%,
+    rgba(59, 68, 82, 1) 100%
+  );
 }
 
 * {
@@ -72,7 +74,7 @@
   text-decoration: None;
   color: black;
   font-size: 18px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -145,19 +147,9 @@
   margin-bottom: 10px;
 
   color: white;
-  text-shadow:
-    0 -1px 0 #fff,
-    0 1px 0 #2e2e2e,
-    0 2px 0 #2c2c2c,
-    0 3px 0 #2a2a2a,
-    0 4px 0 #282828,
-    0 5px 0 #262626,
-    0 6px 0 #242424,
-    0 7px 0 #222,
-    0 8px 0 #202020,
-    0 9px 0 #1e1e1e,
-    0 10px 0 #1c1c1c,
-    0 11px 0 #1a1a1a,
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
     0 15px 20px rgba(0, 0, 0, 0.9);
 }
 
@@ -170,7 +162,7 @@
 
 .section1 .tagline {
   font-size: 20px;
-  font-family: 'comic sans ms';
+  font-family: "comic sans ms";
   margin-bottom: 40px;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   color: rgb(233, 246, 167);
@@ -203,7 +195,8 @@
   margin-top: 20px;
   color: white;
   font-size: 22px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   letter-spacing: 2px;
   padding: 16px 42px;
   cursor: pointer;
@@ -211,7 +204,7 @@
   border: 0 solid;
   box-shadow: inset 0 0 35px rgba(255, 255, 255, 0);
   outline: 1px solid;
-  outline-color: rgba(255, 255, 255, .5);
+  outline-color: rgba(255, 255, 255, 0.5);
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -219,56 +212,73 @@
 
 .section1 button:hover {
   border: 7px double rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 0 35px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  box-shadow: inset 0 0 35px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 20px;
   text-shadow: 1px 1px 2px #427388;
 }
 
 .arrows {
-	width: 60px;
-	height: 72px;
-	position: absolute;
-	left: 50%;
-	margin-left: -30px;
-	bottom: 20px;
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
 }
 
 .arrows path {
-	stroke: #01070a;
-	fill: transparent;
-	stroke-width: 1px;	
-	animation: arrow 2s infinite;
-	-webkit-animation: arrow 2s infinite; 
+  stroke: #01070a;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
 }
 
-@keyframes arrow{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@-webkit-keyframes arrow{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .arrows path.a1 {
-	animation-delay:-1s;
-	-webkit-animation-delay:-1s;
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
 }
 
 .arrows path.a2 {
-	animation-delay:-0.5s;
-	-webkit-animation-delay:-0.5s;
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
 }
 
-.arrows path.a3 {	
-	animation-delay:0s;
-	-webkit-animation-delay:0s;
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
 }
 
 .section2 {
@@ -296,7 +306,7 @@
   align-items: center;
   text-align: center;
   line-height: 1.4;
-  font-family: 'Comic Sans MS';
+  font-family: "Comic Sans MS";
 }
 
 .section2 p {
@@ -343,10 +353,10 @@
   margin-left: 2%;
   margin-right: 2%;
   backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    background-color: rgba(252, 218, 224, 0.8);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(252, 218, 224, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .section3 li h3 {
