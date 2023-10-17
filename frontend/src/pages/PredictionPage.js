@@ -5,12 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 import DragDrop from "../components/DragDrop";
 import DiseaseDetails from "../components/DiseaseDetails";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const PredictionPage = () => {
   const [file, setFile] = useState(null);
   const [prediction, setPrediction] = useState(null);
   const [predictedDiseaseData, setPredictedDiseaseData] = useState(null);
   const [healthy, setHealthy] = useState(null);
+
+  const {user} = useAuthContext();
 
   const handleFileChange = (file) => {
     setFile(file);
@@ -27,6 +30,11 @@ const PredictionPage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    if(!user){
+      notifyNotLoggedInError();
+      return;
+    }
+
     if (!file) {
       notifyImageSelectError();
       return;
@@ -42,6 +50,7 @@ const PredictionPage = () => {
         {
           headers: {
             "Content-Type": "multipart/form-data",
+            "Authorization": `Bearer ${user.token}`
           },
         }
       );
@@ -119,6 +128,18 @@ const PredictionPage = () => {
 
   const notifyFetchError = () =>
     toast.error("Could not make prediction!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+    const notifyNotLoggedInError = () =>
+    toast.error("You are not logged in!", {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
