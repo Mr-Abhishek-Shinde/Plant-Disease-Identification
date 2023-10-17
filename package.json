@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Mr-Abhishek-Shinde/plant-disease-identification/issues"
   },
-  "homepage": "https://github.com/Mr-Abhishek-Shinde/plant-disease-identification#readme"
+  "homepage": "https://github.com/Mr-Abhishek-Shinde/plant-disease-identification#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
 }

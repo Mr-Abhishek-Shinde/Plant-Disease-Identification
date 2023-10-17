@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express')
 const diseasesRoutes = require('./routes/diseases')
+const userRoutes = require('./routes/user')
 const mongoose = require('mongoose')
 
 const app = express()
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/api/diseases', diseasesRoutes)
+app.use('/api/user', userRoutes)
 
 // connect to db
 mongoose.set("strictQuery", false);  // this is added to remove deprecation warning
