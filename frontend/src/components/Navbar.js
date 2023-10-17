@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
   const handleClick = () => {
     logout();
-  }
+  };
+
+  // setTimeout(() => {
+  //   props.setOnPrediction(true);
+  // }, 1000);
 
   return (
     <div className="navbar">
@@ -19,28 +23,47 @@ const Navbar = () => {
         </Link>
       </div>
       <nav>
-        {user && (<div>
-          <span>{user.email}</span>
-          <li>
-            <button onClick={handleClick} >Log Out</button>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/predict">Predict</Link>
-          </li>
-        </div>
-        )}
-        {!user && (
+        {user && (
           <div>
             <li>
-              <Link to="/authenticate">Login/SignUp</Link>
+              <span>
+                <span className="Greeting">{"Welcome "} </span>
+                <span className="UserId">{user.email}</span>
+              </span>
+            </li>
+            {props.onPrediction && (
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+            )}
+            {!props.onPrediction && (
+              <li>
+                <Link to="/predict">Predict</Link>
+              </li>
+            )}
+            <li>
+              <button className="logout-button" onClick={handleClick}>
+                Log Out
+              </button>
             </li>
           </div>
         )}
-      </nav >
-    </div >
+        {!user && (
+          <div>
+            {props.onLogin && (
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+            )}
+            {!props.onLogin && (
+              <li>
+                <Link to="/authenticate">Login/SignUp</Link>
+              </li>
+            )}
+          </div>
+        )}
+      </nav>
+    </div>
   );
 };
 

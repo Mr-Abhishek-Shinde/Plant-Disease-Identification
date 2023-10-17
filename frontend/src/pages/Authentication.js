@@ -3,8 +3,12 @@ import LoginComponent from "../components/LoginComponent";
 import SignupComponent from "../components/SignupComponent";
 import "../login.css";
 
-const Authentication = () => {
+const Authentication = (props) => {
   const [showLogin, setShowLogin] = useState(true);
+
+  setTimeout(() => {
+    props.alterLogin(true);
+  }, 100);
 
   return (
     <div className="auth-container">

@@ -10,10 +10,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const HomePage = () => {
+const HomePage = (props) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  setTimeout(() => {
+    props.setOnPrediction(false);
+    props.alterLogin(false);
+  }, 100);
 
   return (
     <div className="container-homePage">

@@ -7,21 +7,76 @@ import HomePage from "./pages/HomePage";
 import PredictionPage from "./pages/PredictionPage";
 import ErrorPage from "./pages/ErrorPage";
 import Authentication from "./pages/Authentication";
+import { useState } from "react";
 
 function App() {
   const { user } = useAuthContext();
+  const [onPrediction, setOnPrediction] = useState(false);
+  const [onLogin, setOnLogin] = useState(false);
+
+  const alterPredition = (arg) => {
+    setOnPrediction(arg);
+  };
+
+  const alterLogin = (arg) => {
+    setOnLogin(arg);
+  };
   return (
     <div className="App">
       <div className="App">
         <BrowserRouter>
-          <Navbar />
+          <Navbar onPrediction={onPrediction} onLogin={onLogin} />
           <div className="pages">
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/authenticate" element={user ? <PredictionPage /> : <Authentication />} />
-              <Route path="/predict" element={user ? <PredictionPage /> : <Authentication/>} />
-              <Route path="/404" element={user ? <ErrorPage/> : <Authentication/>} />
-              <Route path="*" element={user ? <Navigate to="/404" /> : <Authentication/>} />
+              <Route
+                path="/"
+                element={
+                  <HomePage
+                    setOnPrediction={alterPredition}
+                    alterLogin={alterLogin}
+                  />
+                }
+              />
+              <Route
+                path="/authenticate"
+                element={
+                  user ? (
+                    <PredictionPage setOnPrediction={alterPredition} />
+                  ) : (
+                    <Authentication alterLogin={alterLogin} />
+                  )
+                }
+              />
+              <Route
+                path="/predict"
+                element={
+                  user ? (
+                    <PredictionPage setOnPrediction={setOnPrediction} />
+                  ) : (
+                    <Authentication alterLogin={alterLogin} />
+                  )
+                }
+              />
+              <Route
+                path="/404"
+                element={
+                  user ? (
+                    <ErrorPage />
+                  ) : (
+                    <Authentication alterLogin={alterLogin} />
+                  )
+                }
+              />
+              <Route
+                path="*"
+                element={
+                  user ? (
+                    <Navigate to="/404" />
+                  ) : (
+                    <Authentication alterLogin={alterLogin} />
+                  )
+                }
+              />
             </Routes>
           </div>
         </BrowserRouter>

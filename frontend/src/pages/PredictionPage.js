@@ -7,13 +7,17 @@ import DragDrop from "../components/DragDrop";
 import DiseaseDetails from "../components/DiseaseDetails";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-const PredictionPage = () => {
+const PredictionPage = (props) => {
+  setTimeout(() => {
+    props.setOnPrediction(true);
+  }, 100);
+
   const [file, setFile] = useState(null);
   const [prediction, setPrediction] = useState(null);
   const [predictedDiseaseData, setPredictedDiseaseData] = useState(null);
   const [healthy, setHealthy] = useState(null);
 
-  const {user} = useAuthContext();
+  const { user } = useAuthContext();
 
   const handleFileChange = (file) => {
     setFile(file);
@@ -30,7 +34,7 @@ const PredictionPage = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if(!user){
+    if (!user) {
       notifyNotLoggedInError();
       return;
     }
@@ -50,7 +54,7 @@ const PredictionPage = () => {
         {
           headers: {
             "Content-Type": "multipart/form-data",
-            "Authorization": `Bearer ${user.token}`
+            Authorization: `Bearer ${user.token}`,
           },
         }
       );
@@ -138,7 +142,7 @@ const PredictionPage = () => {
       theme: "light",
     });
 
-    const notifyNotLoggedInError = () =>
+  const notifyNotLoggedInError = () =>
     toast.error("You are not logged in!", {
       position: "top-right",
       autoClose: 3000,
