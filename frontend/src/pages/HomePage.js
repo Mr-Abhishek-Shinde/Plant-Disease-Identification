@@ -6,9 +6,9 @@ import scanImage from "../images/scan.jpg";
 import diagnoseImage from "../images/diagnose.jpg";
 import treatmentImage from "../images/treatment.jpg";
 
-import Aos from 'aos';
+import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const HomePage = () => {
   useEffect(() => {
@@ -22,8 +22,10 @@ const HomePage = () => {
         <div className="overlay">
           <h1 data-aos="fade-left">AgroNexus</h1>
           <h2 data-aos="fade-right">From Diagnosis To Solution</h2>
-          <p className="tagline" data-aos="zoom-in" data-aos-duration="1200">The Future of Plant Health is Here</p>
-          <Link to="/predict">
+          <p className="tagline" data-aos="zoom-in" data-aos-duration="1200">
+            The Future of Plant Health is Here
+          </p>
+          <Link to="/authenticate">
             <button>Get Started</button>
           </Link>
         </div>
@@ -34,11 +36,13 @@ const HomePage = () => {
         </svg>
       </section>
       <section className="section2 section">
-        <div
-          className="overlay info">
+        <div className="overlay info">
           <h2>What Is AgroNexus?</h2>
           <p>
-            AgroNexus is a platform that detects the diseases in crops and provides information and solutions for the diseases. One of the key features of AgroNexus is its ability to predict and diagnose crop diseases and pests using machine learning algorithms.
+            AgroNexus is a platform that detects the diseases in crops and
+            provides information and solutions for the diseases. One of the key
+            features of AgroNexus is its ability to predict and diagnose crop
+            diseases and pests using machine learning algorithms.
           </p>
           <h3>Connecting Agriculture and Technology</h3>
         </div>
@@ -55,7 +59,8 @@ const HomePage = () => {
             <img src={scanImage} alt="" />
             <h3>Scan Your Plants</h3>
             <p>
-              Simply upload a picture of your plant and let <span> AgroNexus </span> do the rest.
+              Simply upload a picture of your plant and let{" "}
+              <span> AgroNexus </span> do the rest.
             </p>
           </li>
           <li>

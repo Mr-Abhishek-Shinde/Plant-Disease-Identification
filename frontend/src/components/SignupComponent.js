@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import "./SignupComponent.css"; // Import the CSS file
+import "../login.css"; // Import the CSS file
 
 const SignupComponent = () => {
   const [username, setUsername] = useState("");
@@ -10,27 +12,34 @@ const SignupComponent = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSignup}>Sign Up</button>
+    <div className="signup-container">
+      {/* <h2>Sign Up</h2> */}
+      <div>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="input-field"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="input-field"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
+        />
+      </div>
+      <button onClick={handleSignup} className="btn-primary">
+        Sign Up
+      </button>
     </div>
   );
 };
