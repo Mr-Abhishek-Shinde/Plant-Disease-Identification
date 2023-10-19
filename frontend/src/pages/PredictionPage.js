@@ -6,8 +6,18 @@ import "react-toastify/dist/ReactToastify.css";
 import DragDrop from "../components/DragDrop";
 import DiseaseDetails from "../components/DiseaseDetails";
 import { useAuthContext } from "../hooks/useAuthContext";
+import SelectImages from "../components/SelectImages";
 
 const PredictionPage = (props) => {
+  const [dragDrop, setDragDrop] = useState(true);
+
+  const alterDragDrop = (arg) => {
+    setDragDrop(arg);
+  };
+
+  const [options1, setOptions1] = useState(["a", "b", "c", "d", "e", "f"]);
+  const [options2, setOptions2] = useState(["a", "c", "d", "e", "f"]);
+
   setTimeout(() => {
     props.setOnPrediction(true);
   }, 100);
@@ -168,16 +178,40 @@ const PredictionPage = (props) => {
         pauseOnHover
         theme="light"
       />
-      <form onSubmit={handleFormSubmit}>
-        <DragDrop
-          onFileChange={handleFileChange}
-          onRemoveClicked={handleRemoveClicked}
-        />
-        <button type="submit" className="submit">
-          Predict
-        </button>
-      </form>
-
+      <div className="predict-container">
+        <div className="predict-options">
+          <button
+            className="predict-btn"
+            id="predict-btn-1"
+            onClick={() => alterDragDrop(true)}
+          >
+            Upload Image
+          </button>
+          <button
+            className="predict-btn"
+            id="predict-btn-2"
+            onClick={() => alterDragDrop(false)}
+          >
+            Select Image
+          </button>
+        </div>
+        <div className="predict-choice">
+          {dragDrop && (
+            <form onSubmit={handleFormSubmit}>
+              <DragDrop
+                onFileChange={handleFileChange}
+                onRemoveClicked={handleRemoveClicked}
+              />
+              <button type="submit" className="submit">
+                Predict
+              </button>
+            </form>
+          )}
+          {!dragDrop && (
+            <SelectImages options1={options1} options2={options2} />
+          )}
+        </div>
+      </div>
       {!healthy && prediction && predictedDiseaseData && (
         <div>
           {/* <div className="prediction-result">
@@ -192,7 +226,6 @@ const PredictionPage = (props) => {
           </div>
         </div>
       )}
-
       {healthy && (
         <div>
           <div className="prediction-result">
