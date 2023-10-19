@@ -181,18 +181,20 @@ const PredictionPage = (props) => {
       <div className="predict-container">
         <div className="predict-options">
           <button
-            className="predict-btn"
+            className={dragDrop ? "active predict-btn" : "deactive predict-btn"}
             id="predict-btn-1"
             onClick={() => alterDragDrop(true)}
           >
             Upload Image
           </button>
           <button
-            className="predict-btn"
+            className={
+              !dragDrop ? "active predict-btn" : "deactive predict-btn"
+            }
             id="predict-btn-2"
             onClick={() => alterDragDrop(false)}
           >
-            Select Image
+            Disease Name
           </button>
         </div>
         <div className="predict-choice">
@@ -208,7 +210,12 @@ const PredictionPage = (props) => {
             </form>
           )}
           {!dragDrop && (
-            <SelectImages options1={options1} options2={options2} />
+            <form onSubmit={handleFormSubmit}>
+              <SelectImages options1={options1} options2={options2} />
+              <button type="submit" className="submit">
+                Predict
+              </button>
+            </form>
           )}
         </div>
       </div>

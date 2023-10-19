@@ -131,7 +131,8 @@
 }
 
 /* Hover Effect */
-.logout-button:hover {
+.logout-button:hover,
+.predict-container .predict-options :active {
   background-color: pink; /* Darker green color on hover */
 }
 
@@ -465,7 +466,7 @@
 /* prediction page styling: */
 .predictionpage-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 15px;
@@ -477,6 +478,97 @@
   filter: brightness(0.9);
 }
 
+.predict-container {
+  min-height: 450px;
+  min-width: 340px;
+  /* background-color: pink; */
+}
+
+.predict-options {
+  position: relative;
+  top: 10px;
+  display: flex;
+  /* background-color: green; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.predict-btn {
+  margin: 5px;
+  padding: 8px 10px;
+}
+
+.predict-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background-color: #1aac83; */
+  min-height: calc(450px - 70px);
+}
+
+/* SelectImage component styling */
+.active {
+  background-color: greenyellow;
+}
+
+.deactive {
+  background-color: red;
+}
+
+.options-container {
+  min-height: 290px;
+  min-width: 300px;
+  background-color: #cbfff5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.selectField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.selectField-label {
+  padding: 5px;
+  margin: 5px;
+  /* CSS */
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  /* color: #d3510b; */
+  font-size: 18px; /* Set the desired font size */
+}
+
+.selectField-select {
+  padding: 12px;
+  text-align: center;
+}
+
+select {
+  width: 250px; /* Set the width to the desired pixel value */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+select option:checked {
+  background-color: #e0e0e0;
+}
+
+select option:hover {
+  background-color: #f2f2f2;
+}
+/*  predict page container form*/
 .predictionpage-container form {
   display: flex;
   flex-direction: column;
@@ -505,6 +597,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
 /* DiseaseDetails component styling: */
