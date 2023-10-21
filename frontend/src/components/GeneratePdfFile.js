@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
 
 const MyPdfDocument = (props) => {
     const { predictedDiseaseData } = props;
-    console.log(predictedDiseaseData.disease_symptoms)
     const content = (
         <Page style={styles.page}>
             <View style={{ position: 'absolute', top: '40%', left: '20%' }}>
