@@ -35,6 +35,8 @@
   /* background-color: var(--primary);  */
   /* background-color: rgb(0, 195, 255);  */
   z-index: 10;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-title {
@@ -89,33 +91,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
 }
 
 .navbar div li span {
   font-size: 15px;
   font-family: "BRUX", sans-serif;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-  color: white; /* A vibrant yellow color */
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5),
-    0 0 30px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.2),
-    0 0 50px rgba(0, 255, 0, 0.1);
-  /* margin: 5px; */
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-
-.navbar div li span .Greeting {
-  color: #5c33c4;
-}
-/* .navbar div li span .UserId {
-  border: 2px solid blue;
-  color: #9d88d2;
-} */
 
 .logout-button {
-  /* Button Styles */
-
-  display: inline-block;
+    display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -466,7 +453,7 @@
 /* prediction page styling: */
 .predictionpage-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 15px;
@@ -475,6 +462,7 @@
   background-image: url("images/abstract_bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   filter: brightness(0.9);
 }
 
@@ -497,6 +485,8 @@
 .predict-btn {
   margin: 5px;
   padding: 8px 10px;
+  color: white;
+  border: 0;
 }
 
 .predict-choice {
@@ -511,11 +501,11 @@
 
 /* SelectImage component styling */
 .active {
-  background-color: greenyellow;
+  background-color: var(--primary);
 }
 
 .deactive {
-  background-color: red;
+  background-color: var(--secondary);
 }
 
 .options-container {
@@ -527,6 +517,7 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  border: 3px dotted var(--secondary);
 }
 
 .selectField {

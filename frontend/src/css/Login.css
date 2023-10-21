@@ -1,4 +1,4 @@
-/* LoginComponent.css */
+/* Login component: */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,6 @@
   text-align: center;
   margin: 0 auto;
   width: 350px;
-  /* height: 400px; */
   padding: 30px;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -38,9 +37,7 @@
   background-color: #0056b3;
 }
 
-/* Sign Up */
-
-/* SignupComponent.css */
+/* Signup component: */
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -50,29 +47,20 @@
   text-align: center;
   margin: 0 auto;
   width: 350px;
-  /* height: 400px; */
   padding: 30px;
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Same CSS as LoginComponent.css for input-field and btn-primary */
 
-/* main css */
-
-/* Authentication.css */
-/* Authentication.css */
-/* Authentication.css */
-/* Authentication.css */
 .auth-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* background-color: #007bff;  */
-  background-image: url("./images/abstract_bg.jpg");
-  color: #fff; /* Text color */
+  background-image: url("../images/abstract_bg.jpg");
+  color: #fff;
 }
 
 .auth-button {
@@ -88,13 +76,13 @@
   border-radius: 5px;
   cursor: pointer;
 
-  color: #fff; /* Text color */
+  color: #fff;
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .auth-button button:hover {
-  background-color: #f57c00; /* Darker color on hover */
+  background-color: #f57c00;
 }
 
 .auth-form {
@@ -115,7 +103,7 @@
 
 .btn-primary {
   background-color: #ff9800;
-  color: #fff; /* Text color */
+  color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -126,7 +114,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #f57c00; /* Darker color on hover */
+  background-color: #f57c00;
 }
 
 @media (max-width: 768px) {
@@ -150,9 +138,9 @@
 }
 
 .active {
-  background-color: greenyellow;
+  background-color: var(--primary);
 }
 
 .deactive {
-  background-color: red;
+  background-color: var(--secondary);
 }

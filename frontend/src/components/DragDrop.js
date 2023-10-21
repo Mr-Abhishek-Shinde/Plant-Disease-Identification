@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./DragDrop.css";
+import "../css/DragDrop.css";
 
 const DragDrop = ({ onFileChange, onRemoveClicked }) => {
   const [image, setImage] = useState(null);

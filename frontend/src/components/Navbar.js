@@ -27,8 +27,8 @@ const Navbar = (props) => {
           <div>
             <li>
               <span>
-                <span className="Greeting">{"Welcome "} </span>
-                <span className="UserId">{user.email}</span>
+                <span className="greetingsText">{"Welcome "} </span>
+                <span className="userIdText">{user.email}</span>
               </span>
             </li>
             {props.onPrediction && (
