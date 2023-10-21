@@ -8,6 +8,7 @@
     border: 3px dotted var(--secondary);
     padding: 1rem;
     background-color: #cbfff5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .dropzone {

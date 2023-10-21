@@ -16,7 +16,7 @@ const HomePage = (props) => {
   }, []);
 
   setTimeout(() => {
-    props.setOnPrediction(false);
+    props.alterPrediction(false);
     props.alterLogin(false);
   }, 100);
 

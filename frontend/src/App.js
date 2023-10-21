@@ -14,7 +14,7 @@ function App() {
   const [onPrediction, setOnPrediction] = useState(false);
   const [onLogin, setOnLogin] = useState(false);
 
-  const alterPredition = (arg) => {
+  const alterPrediction = (arg) => {
     setOnPrediction(arg);
   };
 
@@ -32,7 +32,7 @@ function App() {
                 path="/"
                 element={
                   <HomePage
-                    setOnPrediction={alterPredition}
+                  alterPrediction={alterPrediction}
                     alterLogin={alterLogin}
                   />
                 }
@@ -41,7 +41,7 @@ function App() {
                 path="/authenticate"
                 element={
                   user ? (
-                    <PredictionPage setOnPrediction={alterPredition} />
+                    <PredictionPage alterPrediction={alterPrediction} />
                   ) : (
                     <Authentication alterLogin={alterLogin} />
                   )
@@ -51,7 +51,7 @@ function App() {
                 path="/predict"
                 element={
                   user ? (
-                    <PredictionPage setOnPrediction={setOnPrediction} />
+                    <PredictionPage alterPrediction={alterPrediction} />
                   ) : (
                     <Authentication alterLogin={alterLogin} />
                   )

@@ -102,9 +102,12 @@ const plantDiseaseNamesMapping = {
 };
 
 const PredictionPage = (props) => {
+  const alterPrediction = props.alterPrediction;
+
   setTimeout(() => {
-    props.setOnPrediction(true);
+    alterPrediction(true);
   }, 100);
+
 
   const [file, setFile] = useState(null);
   const [prediction, setPrediction] = useState(null);

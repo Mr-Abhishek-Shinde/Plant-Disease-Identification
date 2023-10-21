@@ -12,6 +12,8 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .input-field {
@@ -21,6 +23,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -31,6 +35,8 @@
   padding: 10px 20px;
   cursor: pointer;
   font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -51,6 +57,8 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .auth-container {
@@ -66,6 +74,8 @@
 .auth-button {
   display: flex;
   margin-bottom: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .auth-button button {
@@ -75,10 +85,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
   color: #fff;
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .auth-button button:hover {
@@ -99,6 +110,8 @@
   border-radius: 5px;
   font-size: 16px;
   box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -108,9 +121,11 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   transition: background-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -139,8 +154,14 @@
 
 .active {
   background-color: var(--primary);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
 }
 
 .deactive {
   background-color: var(--secondary);
+}
+
+.signup-container h5, .login-container h5{
+  color: var(--secondary);
 }

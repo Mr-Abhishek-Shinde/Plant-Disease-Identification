@@ -3,7 +3,7 @@ import "../css/Login.css";
 import { useSignup } from "../hooks/useSignup";
 
 const SignupComponent = () => {
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,15 +17,15 @@ const SignupComponent = () => {
 
   return (
     <div className="signup-container">
-      {/* <h2>Sign Up</h2> */}
+      <h5>New User? Signup to Continue.</h5>
       <div>
-        <input
+        {/* <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="input-field"
-        />
+        /> */}
         <input
           type="email"
           placeholder="Email"
